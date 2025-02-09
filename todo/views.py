@@ -3,7 +3,6 @@ from .models import Todo
 from .serializations import Todoseralizer
 
 
-class TodoviewSet(viewsets.ModelViewSet):
-
+class TodoViewSet(viewsets.ModelViewSet):
     queryset = Todo.objects.all().order_by('-created_at')
     serializer_class = Todoseralizer

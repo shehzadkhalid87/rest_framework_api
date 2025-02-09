@@ -1,12 +1,11 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import TodoviewSet
+from .views import TodoViewSet
 
 
 router = DefaultRouter()
-router.register(r'todos', TodoviewSet)
+router.register(r'todos', TodoViewSet)
 
-
-urlpatterns =[
+urlpatterns = [
     path('', include(router.urls)),
 ]
